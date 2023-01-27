@@ -13,7 +13,7 @@
   <div class="container">
     <div class="row" id="liste">
     <h1>Liste de livres</h1>
-    <button id="btnAjout" class="btn btn-success">Ajouter un nouveau livre</button>
+    <button id="btnAjout" class="btn btn-success col-3">Ajouter un nouveau livre</button>
     <table id="listeLivres" class="table table-striped">
       <thead>
         <tr>
@@ -44,6 +44,20 @@
       <button type="button" class="btn btn-primary" onclick="ajoutLivre()">Valider</button>
     </form>
   </div>
+    <div class="row" id="edit">
+      <h2>Editer un livre</h2>
+      <form id="formEditLivre" >
+        <div class="mb-3">
+          <label for="etitre" class="form-label">Titre</label>
+          <input type="text" class="form-control" id="etitre" maxlength="10" required pattern="[A-Z]{3}[0-9]{2}">
+        </div>
+        <div class="mb-3">
+          <label for="eauteur" class="form-label">Auteur</label>
+          <input type="text" class="form-control" id="eauteur" required>
+        </div>
+        <input type="hidden" id="eid"/>
+        <button type="submit" class="btn btn-primary" >Valider</button>
+      </form>
   </div>
 
 
